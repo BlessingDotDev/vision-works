@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import { flexcenter, sm } from "@/lib/styles";
 
@@ -12,10 +13,12 @@ function SearchInput() {
         border-white/20 focus:outline-none focus:ring-1 
         focus:ring-green-950 transition-all duration-300"
       />
+      <Link href="/services">
       <button className="flex justify-center items-center cursor-pointer bg-green-950 
       h-12 w-12 rounded-br-xl rounded-tr-xl ring-green-950 ring-1">
         <MagnifyingGlassIcon className={sm} />
       </button>
+      </Link>
     </div>
   );
 }
