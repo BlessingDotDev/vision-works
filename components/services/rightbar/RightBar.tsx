@@ -1,5 +1,6 @@
 import { AppWindowIcon, ZoomIn } from "lucide-react"
 import Text from "@/components/ui/Text"
+import Image from "next/image"
 
 function RightBar() {
   return (
@@ -10,12 +11,13 @@ function RightBar() {
       </div>
 
       <div className="relative flex flex-col gap-8 mt-6">
-        <div className="h-64">
-          {/* <img
-            src="/src/assets/map.jpg"
+        <div className="h-64 relative">
+          <Image
+            src="/map.jpg"
             alt="location on the map"
+            fill
             className="bg-green-900 w-full h-full object-cover rounded-2xl"
-          /> */}
+          />
           <button className="absolute top-2 right-2 
             flexcenter bg-black/40 p-2 rounded-lg"
           >

@@ -1,14 +1,16 @@
 import SearchInput from "@/components/services/SearchInput";
+import Image from "next/image"
 
 function HeroSection() {
   return (
-    <section className=" relative min-h-[50vh] ">
+    <section className=" relative min-h-[40vh] ">
 
       <div className=" absolute inset-0">
-        {/* <img
-          src="/src/assets/hero.png"
+        <Image
+          src="/hero.png"
           alt="A plumber fixing a sink"
-          className="object-cover w-full h-full "/> */}
+          fill
+          className="object-cover"/>
       </div>
 
       <div className="absolute inset-0 bg-gradient-to-l from-black/0 to-black"/>
@@ -18,7 +20,9 @@ function HeroSection() {
           <br/><span className="text-green-500"> near you</span>
         </h1>
 
-        <p className="text-sm my-3 text-gray-400 leading-relaxed tracking-normal">Connect with reliable professionals in your area</p>
+        <p className="text-sm my-3 text-gray-400 leading-relaxed tracking-normal">
+          Connect with reliable professionals in your area
+        </p>
 
         <SearchInput />
       </div>

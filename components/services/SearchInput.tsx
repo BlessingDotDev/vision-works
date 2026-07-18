@@ -8,8 +8,8 @@ function SearchInput() {
       md:w-[70%] w-[90%] gap-2 p-2 rounded-2xl ring-1 ring-gray-800
        bg-black -bottom-[25px] md:-bottom-[40px]"
     >
-      <div className="flexcenter gap-2">
-        <Search />
+      <div className="flex justify-center items-center gap-2">
+        <Search className="h-4" strokeWidth={2}/>
         <input
           type="text"
           placeholder="What service do you want?"
@@ -17,8 +17,8 @@ function SearchInput() {
         />
       </div>
 
-      <div className="flexcenter gap-2 justify-start">
-        <MapPinIcon className='text-green-500' />
+      <div className="flex items-center gap-2 justify-start">
+        <MapPinIcon className='text-green-500 h-4' strokeWidth={2}/>
         <input
           type="text"
           placeholder="Pretoria Sunnyside"
