@@ -53,7 +53,7 @@ const Links: NavLink[] = [
 
 function MobileHeader() {
   return (
-    <div className="md:hidden fixed bottom-0 right-0 left-0 flex items-center justify-between py-4 px-8 bg-black">
+    <div className="md:hidden fixed bottom-0 right-0 left-0 flex items-center justify-between py-2 px-8 bg-black">
       {Links.map((link) => (
         <Link href={link.route} key={link.id} className="flex flex-col justify-center items-center gap-2  ">
        
