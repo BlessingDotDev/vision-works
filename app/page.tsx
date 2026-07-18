@@ -1,4 +1,5 @@
 import SearchInput from "@/components/home/SearchInput";
+import Tasks from "@/components/home/Tasks";
 
 export default function Home() {
   return (
@@ -10,6 +11,8 @@ export default function Home() {
           </h1>
           
           <SearchInput />
+          
+          <Tasks />
         </section>
       </main>
     </>

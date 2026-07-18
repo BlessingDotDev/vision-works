@@ -7,13 +7,19 @@ type TaskSelectedProps = {
 
 function TaskSelected({ name, keywords}: TaskSelectedProps) {
   return (
-    <Link href={`/services`} key={name} className=" bg-blue-500/10 p-4 rounded-lg">
-      <div className="flexcenter">
+    <Link 
+      href={`/services`} 
+      key={name} 
+      className="p-4 rounded-lg shadow-sm hover:shadow-md shadow-purple-700"
+    >
+      <div className="flex justify-center items-center">
         <button></button>
       </div>
 
-      <h3 className=" text-md sm:text-lg font-semibold">{name}</h3>
-      <h4 className="text-gray-500">
+      <h3 className="font-thin leading-relaxed tracking-widest">
+        {name}
+      </h3>
+      <h4 className="text-gray-300 text-sm tracking-wide">
         {keywords.join(', ')}
       </h4>
     </Link>

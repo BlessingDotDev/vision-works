@@ -14,14 +14,14 @@ function Task({id, name, setActive, Icon}: TaskProps) {
     <div
       key={id}
       onClick={() => setActive(id)}
-      className="flexcenter shrink-0 flex-col 
+      className="flex justify-center items-center shrink-0 flex-col 
                 group cursor-pointer gap-2"
     >
-      <Icon className="w-6 h-6 text-gray-300
-               group-hover:text-green-300 hoverEffect" />
-      <h4 className="group-hover:text-green-300 h-12">
+      <Icon className="w-6 text-gray-300
+               group-hover:text-green-500 hoverEffect" />
+      <p className="group-hover:text-green-500 text-gray-300 h-16 text-sm font-light leading-relaxed">
         {name}
-      </h4>
+      </p>
     </div>
   )
 }
