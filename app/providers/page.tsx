@@ -6,27 +6,30 @@ import {
 import Button from "@/components/ui/Button";
 import Text from "@/components/ui/Text";
 import { profileNav } from "@/data/profile"
+import Image from "next/image"
+import Link from "next/link"
 
 function profile() {
   return (
       <main className="my-8 mx-6">
 
-        <div className="flex items-centeer gap-4 mb-6">
-          <ChevronLeft />
-          <h4>Back to services</h4>
-        </div>
+        <Link href="/services" className="flex items-center justify-start gap-2 mb-6">
+          <ChevronLeft className="h-6" strokeWidth={1}/>
+          <p className="text-[12px] text-purple-500">Back to services</p>
+        </Link>
 
         <section>
           <div className="bg-green-900/20 p-4 rounded-2xl 
             flex flex-col gap-12 md:flex-row justify-between">
-            <div className="flex items-center gap-6">
-              {/* <img
+            <div className="flex items-center gap-6 ">
+              <Image
                 alt="profile image"
-                src="/src/assets/hero.png"
-              
-                className="h-24 md:h-32 w-24 md:w-32 ring-2 
-                ring-gray-300 rounded-full object-cover"
-              /> */}
+                src="/hero.png"
+                width={500}
+                height={500}
+                className="object-cover h-24 md:h-32 w-24 md:w-32 ring-2 
+                ring-gray-300 rounded-full "
+              />
 
               <div className="flex flex-col gap-0 md:gap-2">
                 <div className="flex justify-between">
