@@ -45,12 +45,14 @@ function Header() {
         /> */}
         </div>
 
-        <Button variant="header" size="sm">
-          <Bars3Icon className="text-white w-4 h-4 md:hidden" />
-          <p className="hidden md:block font-semibold">
-            Sign-up
-          </p>
-        </Button>
+        <Link href="/auth/sign-up">
+          <Button variant="header" size="sm">
+            <Bars3Icon className="text-white w-4 h-4 md:hidden" />
+            <p className="hidden md:block font-semibold">
+              Sign-up
+            </p>
+          </Button>
+        </Link>
 
       </div>
     </div>
