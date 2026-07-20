@@ -7,16 +7,15 @@ import Button from "@/components/ui/Button";
 import Text from "@/components/ui/Text";
 import { profileNav } from "@/data/profile"
 import Image from "next/image"
-import Link from "next/link"
+import BackLink from "@/components/ui/BackLink";
 
 function profile() {
   return (
       <main className="my-8 mx-6">
 
-        <Link href="/services" className="flex items-center justify-start gap-2 mb-6">
-          <ChevronLeft className="h-6" strokeWidth={1}/>
-          <p className="text-[12px] text-purple-500">Back to services</p>
-        </Link>
+        <BackLink href="/services">
+          Back to services
+        </BackLink>
 
         <section>
           <div className="bg-green-900/20 p-4 rounded-2xl 

@@ -8,7 +8,7 @@ import {
   Mail,
   User,
 } from "lucide-react";
-import Butto from "@/components/ui/Button"
+import BackLink from "@/components/ui/BackLink";
 
 type AuthMode = "login" | "signup";
 
@@ -19,6 +19,11 @@ export default function AuthPage() {
   const isLogin = mode === "login";
 
   return (
+    <>
+      <BackLink href="/" className="mt-4">
+        Back to home
+      </BackLink>
+
     <main className="min-h-screen bg-zinc-950 flex items-center justify-center p-4 ring-2 ring-purple-900">
       <div className="w-full max-w-5xl overflow-hidden rounded-3xl border
        border-white/10 bg-zinc-900 shadow-2xl lg:grid lg:grid-cols-2">
@@ -273,5 +278,6 @@ export default function AuthPage() {
         </div>
       </div>
     </main>
+    </>
   );
 }
