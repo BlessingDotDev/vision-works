@@ -1,5 +1,5 @@
 import {
-  ChevronLeft, Star, MapPinIcon,
+  Star, MapPinIcon,
   Heart, Share, Phone, CheckIcon,
 } from "lucide-react";
 

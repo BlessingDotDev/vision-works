@@ -7,7 +7,9 @@ function MarketingLayout({children}: {children: ReactNode}) {
   return (
     <>
       <Header />
+
       {children}
+      
       <Footer />
       <MobileHeader />
     </>
