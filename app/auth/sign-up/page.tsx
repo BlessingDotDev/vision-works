@@ -9,12 +9,39 @@ import {
   User,
 } from "lucide-react";
 import BackLink from "@/components/ui/BackLink";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod"
+import { signUpSchema } from "@/app/schemas/auth";
+import z from "zod";
 
 type AuthMode = "login" | "signup";
+
+type SignUpFormData = z.infer<typeof signUpSchema>;
 
 export default function AuthPage() {
   const [mode, setMode] = useState<AuthMode>("login");
   const [showPassword, setShowPassword] = useState(false);
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isSubmitting }
+  } = useForm<SignUpFormData>({
+     resolver: zodResolver(signUpSchema),
+
+      defaultValues: {
+        name: "",
+        email: "",
+        password: "",
+      },
+
+      mode: "onBlur", // validated after leaving an input
+      reValidateMode: "onChange"
+  })
+
+  const onSubmit = async (data: SignUpFormData) => {
+    console.log(data)
+  }
 
   const isLogin = mode === "login";
 
@@ -90,7 +117,10 @@ export default function AuthPage() {
             </div>
 
             {/* Form */}
-            <form className="space-y-5">
+            <form
+              onSubmit={handleSubmit(onSubmit)} 
+              className="space-y-5"
+            >
 
               {!isLogin && (
                 <div>
@@ -107,9 +137,16 @@ export default function AuthPage() {
                     <input
                       type="text"
                       placeholder="John Doe"
+                      {...register("name")}
                       className="w-full rounded-xl border border-white/10 bg-zinc-800 py-3.5 pl-11 pr-4 text-sm text-white outline-none transition placeholder:text-zinc-600 focus:border-white/30 focus:ring-2 focus:ring-white/10"
                     />
+
                   </div>
+                    {errors.name && (
+                      <p className="text-sm text-red-500 mt-2">
+                        {errors.name.message}
+                      </p>
+                    )}
                 </div>
               )}
 
@@ -128,11 +165,19 @@ export default function AuthPage() {
                   <input
                     type="email"
                     placeholder="you@example.com"
+                    {...register("email")}
                     className="w-full rounded-xl border border-white/10 bg-zinc-800 py-3.5 pl-11 pr-4 
                     text-sm text-white outline-none transition placeholder:text-zinc-600
                      focus:border-white/30 focus:ring-2 focus:ring-white/10"
                   />
                 </div>
+                {
+                  errors.email && (
+                    <p className="text-sm text-red-500 mt-2">
+                      {errors.email.message}
+                    </p>
+                  )
+                }
               </div>
 
               {/* Password */}
@@ -161,6 +206,7 @@ export default function AuthPage() {
                   <input
                     type={showPassword ? "text" : "password"}
                     placeholder="••••••••"
+                    {...register("password")}
                     className="w-full rounded-xl border border-white/10 bg-zinc-800 py-3.5 pl-11 pr-12 text-sm text-white outline-none transition placeholder:text-zinc-600 focus:border-white/30 focus:ring-2 focus:ring-white/10"
                   />
 
@@ -176,6 +222,13 @@ export default function AuthPage() {
                     )}
                   </button>
                 </div>
+                {
+                  errors.password && (
+                    <p className="text-sm text-red-500 mt-2">
+                      {errors.password.message}
+                    </p>
+                  ) 
+                }
               </div>
 
               {/* Confirm Password */}
@@ -230,6 +283,7 @@ export default function AuthPage() {
               {/* Submit */}
               <button
                 type="submit"
+                disabled={isSubmitting}
                 className="w-full rounded-xl bg-green-500 py-3.5 font-semibold text-zinc-900 transition hover:bg-zinc-200 active:scale-[0.98]"
               >
                 {isLogin ? "Log in" : "Create account"}

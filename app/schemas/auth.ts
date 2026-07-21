@@ -1,7 +1,18 @@
 import z from "zod";
 
-export const signupSchema = z.object({
-  name: z.string().min(3).max(30),
-  email: z.email(),
-  password: z.string().min(8).max(30)
+export const signUpSchema = z.object({
+  name: z
+    .string()
+    .min(3, "Name must be atleast 3 characters")
+    .max(30, "Name is too long"),
+
+  email: z
+    .email("Please enter valid email address"),
+
+  password: z
+    .string()
+    .min(8, "Password must be atleast 8 characters")
+    .max(30, "Password too long")
+    .regex(/[A-Z]/, "Password must contain a uppercase letter")
+    .regex(/[0-9]/, "Password must contain a number")
 }) ;
