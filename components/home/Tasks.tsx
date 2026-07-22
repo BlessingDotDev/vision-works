@@ -15,14 +15,22 @@ function Tasks() {
         snap-x snap-mandatory no-scrollbar">
         {
           services.map((task) => (
-           <Task key={task.id} id={task.id} name={task.name} setActive={setActive} Icon={task.icon}/>
+           <Task 
+            key={task.id}   
+            id={task.id} name={task.name} 
+            setActive={setActive} Icon={task.icon}
+          />
           ))}
       </div>
 
       {/* Render selected content */}
       <div className="flex flex-col sm:justify-center sm:flex-row gap-4 flex-wrap">
         {active && services.find((task) => task.id === active)?.searchWords.map((search) => (
-         <TaskSelected key={search.name} name={search.name} keywords={search.keywords} />
+         <TaskSelected 
+          key={search.name} 
+          name={search.name} 
+          keywords={search.keywords} 
+        />
         ))}
       </div>
     </>

@@ -51,11 +51,6 @@ function Header() {
             </Link>
           )
         })}
-        {/* <Link className={navlink} href="/">Home</Link> 
-        <Link className={navlink} href="/services">Services</Link> 
-        <Link className={navlink} href="/providers">Providers</Link> 
-        <Link className={navlink} href="/how-it-works">How it works</Link> 
-        <Link className={navlink} href="/about">About us</Link>  */}
       </nav>
 
       {/* <div className="flex items-center justify-center gap-2">
