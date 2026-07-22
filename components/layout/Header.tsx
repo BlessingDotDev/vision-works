@@ -1,11 +1,26 @@
+"use client"
+
 import Link from "next/link"
 import Image from "next/image"
+import { usePathname } from "next/navigation";
 import { navlink } from "@/lib/styles";
 import { User } from "lucide-react"
 import Button from '@/components/ui/Button'
 import { Bars3Icon } from "@heroicons/react/24/outline"
+import clsx from "clsx";
+
+const navLinks = [
+  { label: "Home", href: "/" },
+  { label: "Services", href: "/services" },
+  { label: "Providers", href: "/providers" },
+  { label: "How it works", href: "/how-it-works" },
+  { label: "About us", href: "/about" },
+  { label: "Jobs", href: "/job" },
+];
 
 function Header() {
+  const pathname = usePathname();
+
   return (
     <div className=" bg-green-950 w-full flex justify-between items-center py-2 px-6">
 
@@ -23,11 +38,24 @@ function Header() {
       </Link> 
 
       <nav className="hidden md:flex items-center justify-between w-full max-w-lg mx-16">
-        <Link className={navlink} href="/">Home</Link> 
+        {navLinks.map((links) => {
+          const isActive = pathname === links.href;
+
+          return (
+            <Link
+              key={links.href}
+              href={links.href}
+              className={clsx(navlink, isActive && "underline text-green-400")}
+            >
+              {links.label}
+            </Link>
+          )
+        })}
+        {/* <Link className={navlink} href="/">Home</Link> 
         <Link className={navlink} href="/services">Services</Link> 
         <Link className={navlink} href="/providers">Providers</Link> 
         <Link className={navlink} href="/how-it-works">How it works</Link> 
-        <Link className={navlink} href="/about">About us</Link> 
+        <Link className={navlink} href="/about">About us</Link>  */}
       </nav>
 
       {/* <div className="flex items-center justify-center gap-2">

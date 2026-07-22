@@ -12,16 +12,12 @@ function TaskSelected({ name, keywords}: TaskSelectedProps) {
       key={name} 
       className="p-4 rounded-lg shadow-sm hover:shadow-md shadow-purple-700"
     >
-      <div className="flex justify-center items-center">
-        <button></button>
-      </div>
-
-      <h3 className="font-thin leading-relaxed tracking-widest">
+      <p className="font-thin leading-relaxed tracking-widest">
         {name}
-      </h3>
-      <h4 className="text-gray-300 text-sm tracking-wide">
+      </p>
+      <p className="text-gray-300 text-sm tracking-wide">
         {keywords.join(', ')}
-      </h4>
+      </p>
     </Link>
   )
 }
