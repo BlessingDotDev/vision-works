@@ -5,19 +5,23 @@ import Task from "./Task"
 import TaskSelected from "./TaskSelected";
 import { services } from '../../data/services';
 import type { Category } from '../../types/services';
+import clsx from "clsx"
 
 function Tasks() {
   const [active, setActive] = useState<Category | null>(null);
 
   return (
     <>
-      <div className="flex justify-center items-center mx-1 gap-8 mt-12 overflow-x-auto 
-        snap-x snap-mandatory no-scrollbar">
+      <div className={clsx(
+        "flex justify-center items-center mx-1 gap-8 mt-12 overflow-x-auto snap-x snap-mandatory no-scrollbar"
+        )}
+      >
         {
           services.map((task) => (
            <Task 
             key={task.id}   
             id={task.id} name={task.name} 
+            active={active}
             setActive={setActive} Icon={task.icon}
           />
           ))}
