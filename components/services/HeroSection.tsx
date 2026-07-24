@@ -3,7 +3,7 @@ import Image from "next/image"
 
 function HeroSection() {
   return (
-    <section className=" relative min-h-[40vh] ">
+    <section className=" relative min-h-[30vh] ">
 
       <div className=" absolute inset-0">
         <Image

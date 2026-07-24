@@ -14,9 +14,9 @@ function Service({id, name, Icon}: ServiceProps) {
                 group cursor-pointer gap-2 
                 ring-1 ring-green-600 px-2"
     >
-      <Icon className="w-6 h-6 text-gray-300
+      <Icon className="w-5 h-5 text-gray-300
                group-hover:text-green-500 hoverEffect" />
-      <p className="group-hover:text-green-500 text-sm text-gray-300 tracking-wide font-thin hoverEffect">
+      <p className="group-hover:text-green-500 text-xs text-gray-300 tracking-wide hoverEffect">
         {name}
       </p>
     </div>

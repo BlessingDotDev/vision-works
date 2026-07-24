@@ -5,19 +5,19 @@ import Image from "next/image";
 
 function Provider() {
   return (
-    <div className="h-32 flex justify-between items-center gap-4 
+    <div className="h-24 flex justify-between items-center gap-4 
           rounded-2xl ring-1 ring-gray-800 p-4">
       <Image
         src="/hero.png"
         alt="profile picture"
         width={72}
         height={72}
-        className="w-18 h-18 rounded-full"
+        className="w-16 h-16 md:w-8 md:h-18 rounded-full"
       />
 
       <div className="flex-1 ">
-        <p className="font-semibold tracking-wide leading-relaxed">John the Plumber</p>
-        <p className="text-[12px] tracking-wider leading-relaxed">Plumbing</p>
+        <p className="font-semibold text-xs md:text-base tracking-wide leading-relaxed">John the Plumber</p>
+        <p className="text-[10px] md:text-[12px] tracking-wider leading-relaxed">Plumbing</p>
 
         <div className="flex flex-col md:flex-row md:items-center md:gap-8">
           <div className="flex items-center gap-2">
@@ -40,12 +40,11 @@ function Provider() {
       </div>
 
       <div className="flex flex-col gap-1">
-        <Heart className="h-4" strokeWidth={1}/>
-        <p className="text-sm">R350/hr</p>
-        <p className="text-[12px] tracking-wide text-gray-400">Starting from</p>
+        <p className="text-xs md:text-sm">R350/hr</p>
+        <p className="text-[10px] tracking-wide text-gray-400">Starting from</p>
         
         <Link href="/provider">
-          <Button size="xs" className="text-white">
+          <Button size="xs" className="text-white text-xm">
             View Profile
           </Button>
         </Link>

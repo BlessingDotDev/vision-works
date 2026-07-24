@@ -2,6 +2,7 @@ import type { LucideIcon } from "lucide-react";
 import type { Category } from "../../types/services"
 import { Dispatch, SetStateAction } from "react";
 import clsx from "clsx"
+import { iconName, icon } from "@/lib/styles";
 
 type TaskProps = {
   id: Category;
@@ -24,13 +25,13 @@ function Task({id, name, setActive, Icon, active }: TaskProps) {
         
         className={clsx(
         active === id ? "text-green-500" : "text-gray-200",
-        "w-5 text-gray-300 group-hover:text-green-500 hoverEffect"
+        icon
         )} 
       />
 
       <p className={clsx(
         active === id ? "text-green-500" : "text-gray-200",
-        "group-hover:text-green-500 text-gray-300 h-16 text-xs leading-relaxed"
+        iconName
         )}
       >
         {name}
