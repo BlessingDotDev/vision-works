@@ -1,3 +1,5 @@
+"use client"
+
 import {
   House,
   Wrench,
@@ -6,6 +8,8 @@ import {
   CircleUser,
 } from "lucide-react"
 import Link from "next/link"
+import { usePathname } from "next/navigation"
+import clsx from "clsx"
 
 import type { LucideIcon } from "lucide-react"
 
@@ -52,16 +56,43 @@ const Links: NavLink[] = [
 ]
 
 function MobileHeader() {
+
+  const pathName = usePathname();
+
   return (
     <div className="md:hidden fixed bottom-0 right-0 left-0 flex items-center justify-between py-2 px-8 bg-black">
-      {Links.map((link) => (
-        <Link href={link.route} key={link.id} className="flex flex-col justify-center items-center gap-2  ">
+      {Links.map((link) => {
+        const isCorrect = pathName === link.route
+
+        return (
+        <Link 
+          href={link.route}
+          key={link.id} 
+          className={clsx(
+            "flex flex-col justify-center items-center gap-2 px-4 py-2 rounded-full",
+            isCorrect && "bg-green-900/15"
+          )}
+        >
        
-          <link.icon className="w-6 text-gray-300" strokeWidth={2}/>
-          <p className="text-xs text-gray-300 tracking-wide">{link.title}</p>
+          <link.icon 
+            className={clsx(
+              "w-6",
+              isCorrect ? "text-gray-100" : "text-gray-300"
+            )} 
+            strokeWidth={2}
+          />
+          <p className={clsx(
+            "text-xs  tracking-wide",
+            isCorrect ? "text-gray-100" : "text-gray-300"
+            )}>
+            {link.title}
+          </p>
         
         </Link>
-      ))}
+
+        )
+      }
+      )}
     </div>
   )
 }
