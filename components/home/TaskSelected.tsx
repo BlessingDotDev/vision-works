@@ -12,7 +12,7 @@ function TaskSelected({ name, keywords}: TaskSelectedProps) {
       key={name} 
       className="p-4 rounded-lg shadow-sm hover:shadow-md shadow-purple-700"
     >
-      <p className="font-thin leading-relaxed tracking-widest">
+      <p className="font-semibold leading-relaxed tracking-widest">
         {name}
       </p>
       <p className="text-gray-300 text-sm tracking-wide">

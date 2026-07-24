@@ -30,7 +30,7 @@ function Task({id, name, setActive, Icon, active }: TaskProps) {
 
       <p className={clsx(
         active === id ? "text-green-500" : "text-gray-200",
-        "group-hover:text-green-500 text-gray-300 h-16 text-xs font-light leading-relaxed"
+        "group-hover:text-green-500 text-gray-300 h-16 text-xs leading-relaxed"
         )}
       >
         {name}
