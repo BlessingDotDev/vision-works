@@ -19,15 +19,18 @@ function Task({id, name, setActive, Icon, active }: TaskProps) {
       className="flex justify-center items-center shrink-0 flex-col 
                 group cursor-pointer gap-2"
     >
-      <Icon className={clsx(
-        active === id ? "text-green-500" : "text-gray-300",
-        "w-6 text-gray-300 group-hover:text-green-500 hoverEffect"
+      <Icon 
+        strokeWidth={2}
+        
+        className={clsx(
+        active === id ? "text-green-500" : "text-gray-200",
+        "w-5 text-gray-300 group-hover:text-green-500 hoverEffect"
         )} 
       />
 
       <p className={clsx(
-        active === id ? "text-green-500" : "text-gray-300",
-        "group-hover:text-green-500 text-gray-300 h-16 text-sm font-light leading-relaxed"
+        active === id ? "text-green-500" : "text-gray-200",
+        "group-hover:text-green-500 text-gray-300 h-16 text-xs font-light leading-relaxed"
         )}
       >
         {name}
