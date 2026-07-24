@@ -74,7 +74,7 @@ export default function HowItWorksPage() {
           </p>
 
           <h1 className="text-4xl md:text-6xl font-semibold">
-            The right opportunity is just a connection away.
+            The right <mark>opportunity is just a connection</mark> away.
           </h1>
 
           <Text className="mt-6 max-w-2xl text-gray-500">

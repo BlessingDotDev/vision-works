@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import { navlink } from "@/lib/styles";
 import { User } from "lucide-react"
 import Button from '@/components/ui/Button'
-import { Bars3Icon } from "@heroicons/react/24/outline"
+import { LogIn } from "lucide-react"
 import clsx from "clsx";
 
 const navLinks = [
@@ -15,7 +15,8 @@ const navLinks = [
   { label: "Providers", href: "/providers" },
   { label: "How it works", href: "/how-it-works" },
   { label: "About us", href: "/about" },
-  { label: "Jobs", href: "/job" },
+  { label: "Jobs", href: "/jobs" },
+  { label: "Job", href: "/job" },
 ];
 
 function Header() {
@@ -70,7 +71,7 @@ function Header() {
 
         <Link href="/auth/sign-up">
           <Button variant="header" size="sm">
-            <Bars3Icon className="text-white w-4 h-4 md:hidden" />
+            <LogIn className="text-white w-4 h-4 md:hidden" />
             <p className="hidden md:block font-semibold">
               Sign-up
             </p>

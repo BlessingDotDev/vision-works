@@ -55,7 +55,7 @@ export default function AboutPage() {
           </p>
 
           <h1 className="text-4xl md:text-6xl font-semibold tracking-tight">
-            Connecting people with the right opportunities.
+            <mark>Connecting people</mark> with the right opportunities.
           </h1>
 
           <Text className="mt-6 max-w-2xl text-gray-500">

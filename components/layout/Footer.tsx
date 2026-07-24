@@ -1,4 +1,4 @@
-import {/* Facebook, Twitter, Instagram */} from "lucide-react";
+import Image from "next/image"
 
 export default function Footer() {
   return (
@@ -7,12 +7,14 @@ export default function Footer() {
 
         {/* Brand */}
         <div >
-          <div className="flex items-center gap-2">
-            {/* <img 
+          <div className="flex items-center gap-2 mb-4">
+             <Image
               alt="logo image"
-              src="/src/assets/vision-logo.png"
+              src="/vision-logo.png"
+              width={200}
+              height={200}
               className="w-10"
-            /> */}
+            /> 
             <h2 className="text-white text-lg font-bold mb-2">
               Vision<sup>(Works)</sup>
             </h2>
