@@ -12,7 +12,7 @@ function Provider() {
         alt="profile picture"
         width={72}
         height={72}
-        className="w-16 h-16 md:w-8 md:h-18 rounded-full"
+        className="w-16 h-16 md:w-18 md:h-18 rounded-full"
       />
 
       <div className="flex-1 ">
