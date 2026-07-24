@@ -57,8 +57,8 @@ function MobileHeader() {
       {Links.map((link) => (
         <Link href={link.route} key={link.id} className="flex flex-col justify-center items-center gap-2  ">
        
-          <link.icon className="w-6 text-gray-100" strokeWidth={2}/>
-          <p className="text-xs text-gray-100 tracking-wide">{link.title}</p>
+          <link.icon className="w-6 text-gray-300" strokeWidth={2}/>
+          <p className="text-xs text-gray-300 tracking-wide">{link.title}</p>
         
         </Link>
       ))}
