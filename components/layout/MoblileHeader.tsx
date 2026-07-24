@@ -70,21 +70,20 @@ function MobileHeader() {
           href={link.route}
           key={link.id} 
           className={clsx(
-            "flex flex-col justify-center items-center gap-2 px-4 py-2 rounded-full",
-            isCorrect && "bg-green-900/15"
+            "flex flex-col justify-center items-center gap-2 py-1"
           )}
         >
        
           <link.icon 
             className={clsx(
               "w-6",
-              isCorrect ? "text-gray-100" : "text-gray-300"
+              isCorrect ? "text-green-600" : "text-gray-300"
             )} 
             strokeWidth={2}
           />
           <p className={clsx(
             "text-xs  tracking-wide",
-            isCorrect ? "text-gray-100" : "text-gray-300"
+            isCorrect ? "text-green-600" : "text-gray-300"
             )}>
             {link.title}
           </p>
