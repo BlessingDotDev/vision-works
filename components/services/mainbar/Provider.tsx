@@ -5,7 +5,7 @@ import Image from "next/image";
 
 function Provider() {
   return (
-    <div className="h-24 flex justify-between items-center gap-4 
+    <div className="h-24 md:h-32 flex justify-between items-center gap-4 
           rounded-2xl ring-1 ring-gray-800 p-4">
       <Image
         src="/hero.png"
@@ -16,8 +16,12 @@ function Provider() {
       />
 
       <div className="flex-1 ">
-        <p className="font-semibold text-xs md:text-base tracking-wide leading-relaxed">John the Plumber</p>
-        <p className="text-[10px] md:text-[12px] tracking-wider leading-relaxed">Plumbing</p>
+        <p className="font-semibold text-xs md:text-base tracking-wide leading-relaxed">
+          John the Plumber
+        </p>
+        <p className="text-[10px] md:text-[12px] tracking-wider leading-relaxed">
+          Plumbing
+        </p>
 
         <div className="flex flex-col md:flex-row md:items-center md:gap-8">
           <div className="flex items-center gap-2">
@@ -40,6 +44,7 @@ function Provider() {
       </div>
 
       <div className="flex flex-col gap-1">
+        <Heart className="hidden md:block h-4 text-gray-500"/>
         <p className="text-xs md:text-sm">R350/hr</p>
         <p className="text-[10px] tracking-wide text-gray-400">Starting from</p>
         

@@ -20,7 +20,7 @@ function HeroSection() {
           <br/><span className="text-green-500"> near you</span>
         </h1>
 
-        <p className="text-sm my-3 text-gray-400 leading-relaxed tracking-normal">
+        <p className="text-sm my-4 text-gray-400 leading-relaxed tracking-normal">
           Connect with reliable professionals in your area
         </p>
 
