@@ -6,6 +6,7 @@ import {
   User,
   CalendarDays ,
   CircleUser,
+  
 } from "lucide-react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
@@ -13,7 +14,7 @@ import clsx from "clsx"
 
 import type { LucideIcon } from "lucide-react"
 
-type Title = "Home" | "Services" | "Providers" | "Bookings" | "Profile"
+type Title = "Home" | "Services" | "Providers" | "Jobs" | "About"
 
 interface NavLink {
   id: string,
@@ -43,15 +44,15 @@ const Links: NavLink[] = [
   },
   {
     id: crypto.randomUUID(),
-    title: "Bookings",
+    title: "Jobs",
     icon: CalendarDays,
-    route: "bookings"
+    route: "/jobs"
   },
   {
     id: crypto.randomUUID(),
-    title: "Profile",
+    title: "About",
     icon: CircleUser,
-    route: "profile"
+    route: "/about"
   },
 ]
 
