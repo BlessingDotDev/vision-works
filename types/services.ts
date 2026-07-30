@@ -1,3 +1,5 @@
+import type { LucideIcon } from 'lucide-react';
+
 export type Category =
   | 'errands'
   | 'academic'
@@ -11,7 +13,7 @@ export type Category =
 export type Task = {
   id: Category;
   name: string;
-  icon: any;
+  icon: LucideIcon;
   searchWords: {
     name: string;
     keywords: string[];

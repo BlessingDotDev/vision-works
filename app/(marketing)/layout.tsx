@@ -8,8 +8,10 @@ function MarketingLayout({children}: {children: ReactNode}) {
     <>
       <Header />
 
-      {children}
-      
+      <main >
+        {children}
+      </main>
+
       <Footer />
       <MobileHeader />
     </>

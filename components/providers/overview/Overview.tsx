@@ -1,12 +1,10 @@
-import {
-  Star, CheckIcon,
-} from "lucide-react";
+import { CheckIcon } from "lucide-react";
 
 import Button from "@/components/ui/Button";
 import Text from "@/components/ui/Text";
 import { profileNav } from "@/data/profile"
 
-import Reviews  from "@/components/providers/Reviews"
+import Reviews  from "@/components/providers/overview/Reviews"
 
 function Overview() {
   return (

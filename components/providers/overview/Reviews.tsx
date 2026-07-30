@@ -1,4 +1,4 @@
-import ReviewsSummary from "@/components/providers/reviews/ReviewsSummary";
+import ReviewsSummary from "@/components/providers/overview/reviews/ReviewsSummary";
 
 const distribution = [
   { stars: 5, count: 98 },

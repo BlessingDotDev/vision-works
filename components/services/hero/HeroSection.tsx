@@ -1,4 +1,4 @@
-import SearchInput from "@/components/services/SearchInput";
+import SearchInput from "@/components/services/hero/SearchInput";
 import Image from "next/image"
 
 function HeroSection() {

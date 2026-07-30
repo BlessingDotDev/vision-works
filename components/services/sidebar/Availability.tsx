@@ -1,21 +1,7 @@
 import CheckboxItem from "@/components/ui/CheckboxItem";
+import { availability } from "@/data/services";
 
 function Availability() {
-
-  const availability = [
-    {
-      id: crypto.randomUUID(),
-      name: 'Anytime',
-    },
-    {
-      id: crypto.randomUUID(),
-      name: 'Today',
-    },
-    {
-      id: crypto.randomUUID(),
-      name: 'This Week'
-    }
-  ]
 
   return (
     <div className="flex flex-col gap-2">

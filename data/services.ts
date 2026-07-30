@@ -208,3 +208,20 @@ export const services: Task[] = [
     ]
   },
 ];
+
+// sidebar 
+
+ export const availability = [
+    {
+      id: crypto.randomUUID(),
+      name: 'Anytime',
+    },
+    {
+      id: crypto.randomUUID(),
+      name: 'Today',
+    },
+    {
+      id: crypto.randomUUID(),
+      name: 'This Week'
+    }
+  ]
