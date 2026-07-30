@@ -6,6 +6,8 @@ import Button from "@/components/ui/Button";
 import Text from "@/components/ui/Text";
 import { profileNav } from "@/data/profile"
 
+import Reviews  from "@/components/providers/Reviews"
+
 function Overview() {
   return (
     
@@ -55,81 +57,12 @@ function Overview() {
               <div className="container">
                 <h2>Reviews</h2>
 
-                <div className="flex justify-between">
-                  <div className="flex flex-col gap-3">
-                    <Text variant="title">4.8</Text>
+                <Reviews />
 
-                    <div className="flex gap-2">
-                      <Star className="text-yellow-500" fill="currentColor" />
-                      <Star className="text-yellow-500" fill="currentColor" />
-                      <Star className="text-yellow-500" fill="currentColor" />
-                      <Star className="text-yellow-500" fill="currentColor" />
-                      <Star className="text-yellow-500" fill="currentColor" />
-                    </div>
-
-                    <Text>(124 reviews)</Text>
-                  </div>
-
-                  <div className="flex flex-col gap-2">
-                    <div className="flex items-center gap-2">
-                      <p>5</p>
-                      <Star className="h-4 text-green-700" fill="currentColor" />
-
-                      <div className="relative w-64 h-2 bg-gray-400 rounded-lg overflow-hidden">
-                        <div className="absolute bg-green-700 inset-0" />
-                      </div>
-
-                      <p className="text-gray-500">98</p>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <p>4</p>
-                      <Star className="h-4 text-green-700" fill="currentColor" />
-
-                      <div className="relative w-64 h-2 bg-gray-400 rounded-lg overflow-hidden">
-                        <div className="absolute bg-green-700 inset-0" />
-                      </div>
-
-                      <p className="text-gray-500">98</p>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <p>3</p>
-                      <Star className="h-4 text-yellow-500" fill="currentColor" />
-
-                      <div className="relative w-64 h-2 bg-gray-400 rounded-lg overflow-hidden">
-                        <div className="absolute bg-yellow-500 inset-0" />
-                      </div>
-
-                      <p className="text-gray-500">98</p>
-                    </div>
-
-                    <div className="flex items-center gap-2">
-                      <p>2</p>
-                      <Star className="h-4 text-yellow-500" fill="currentColor" />
-
-                      <div className="relative w-64 h-2 bg-gray-400 rounded-lg overflow-hidden">
-                        <div className="absolute bg-yellow-800 inset-0" />
-                      </div>
-
-                      <p className="text-gray-500">98</p>
-                    </div>
-
-                    <div className="flex items-center gap-2">
-                      <p>1</p>
-                      <Star className="h-4 text-yellow-500" fill="currentColor" />
-
-                      <div className="relative w-64 h-2 bg-gray-400 rounded-lg overflow-hidden">
-                        <div className="absolute bg-red-500 inset-0" />
-                      </div>
-
-                      <p className="text-gray-500">98</p>
-                    </div>
-                  </div>
-
-                  <Button size="lg" className="self-start" >
-                    Write a review
-                  </Button>
-
-                </div>
+                <Button size="lg" className="self-start" >
+                  Write a review
+                </Button>
+                  
               </div>
             </div>
   );

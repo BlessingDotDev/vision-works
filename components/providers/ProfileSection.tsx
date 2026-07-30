@@ -11,44 +11,48 @@ function ProfileSection() {
 <section>
           <div className="bg-green-900/20 p-4 rounded-2xl 
             flex flex-col gap-12 md:flex-row justify-between">
-            <div className="flex items-center gap-6 ">
+            <div className="flex items-center gap-4 lg:gap-6 ">
               <Image
                 alt="profile image"
                 src="/hero.png"
                 width={500}
                 height={500}
-                className="object-cover h-24 md:h-32 w-24 md:w-32 ring-2 
+                className="object-cover h-20 md:h-32 w-20 md:w-32 ring-2 
                 ring-gray-300 rounded-full "
               />
 
               <div className="flex flex-col gap-0 md:gap-2">
                 <div className="flex justify-between">
-                  <h2 >Dave the Plumber</h2>
+                  <h1 className="font-semibold leading-relaxed tracking-normal lg:tracking-wider text-sm lg:text-base">
+                    Dave the Plumber
+                  </h1>
                   <Button
                     size="round"
                     variant="rounded"
                     className="md:hidden self-start"
                   >
-                    <Heart className="h-4 w-4 " />
+                    <Heart className="h-2 w-2 md:h-4 md:w-4" />
                   </Button>
                 </div>
 
-                <p className="text-sm">Professional Plumbing Services</p>
+                <p className="text-xs lg:text-sm tracking-noraml lg:tracking-wider text-gray-300">
+                  Professional Plumbing Services
+                </p>
 
-                <div className="flex gap-4 md:items-center md:gap-8">
+                <div className="flex gap-4 md:items-center lg:gap-8">
                   <div className="flex items-center gap-2">
                     <Star className="text-yellow-500 h-3 w-3" fill="currentColor" />
-                    <p className="font-semibold text-[12px]">4.5</p>
-                    <p className="text-[12px]">(124 reviews)</p>
+                    <p className="font-semibold text-[10px] md:text-[12px]">4.5</p>
+                    <p className="text-[10px] md:text-[12px]">(124 reviews)</p>
                   </div>
 
                   <div className="flex items-center gap-2">
                     <MapPinIcon className="text-gray-400 h-3 w-3" />
-                    <p className="text-gray-400 text-[12px]">Acarde Pretoria</p>
+                    <p className="text-gray-400 text-[10px] md:text-[12px]">Acarde Pretoria</p>
                   </div>
                 </div>
 
-                <p className="text-sm  md:block">
+                <p className="text-sm leading-relaxed text-gray-400 md:block">
                   10+ years experience
                 </p>
               </div>
@@ -70,13 +74,13 @@ function ProfileSection() {
                 </Button>
               </div>
 
-              <div className="flex gap-2">
+              <div className="inline-flex gap-2">
                 <Button className="w-1/2">
-                  Chat on Whatsapp
+                  Whatsapp
                 </Button>
 
                 <Button
-                  className="flex gap-2 w-1/2 flexcenter"
+                  className="inline-flex gap-2 w-1/2 items-center"
                 >
                   <Phone className="w-4 h-4" />
                   Call Now
