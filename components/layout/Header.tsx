@@ -23,7 +23,7 @@ function Header() {
   const pathname = usePathname();
 
   return (
-    <div className=" bg-green-950 w-full flex justify-between items-center py-2 px-6">
+    <div className=" bg-green-950 w-full flex justify-between items-center py-3 px-6">
 
       <Link  href="/" className="logo flex items-center">
        <Image 

@@ -76,10 +76,10 @@ function MobileHeader() {
        
           <link.icon 
             className={clsx(
-              "w-6",
               isCorrect ? "text-green-600" : "text-gray-300"
             )} 
             strokeWidth={2}
+            size={18}
           />
           <p className={clsx(
             "text-xs  tracking-wide",
